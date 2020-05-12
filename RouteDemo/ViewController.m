@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "JLRoutes.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+- (IBAction)loadViewControllerFromMainApp:(id)sender {
+    NSURL * url = [NSURL URLWithString:@"next/user/123/msg/hello"];
+    [JLRoutes.globalRoutes routeURL:url];
+}
+- (IBAction)loadViewControllerFromStaticLibrary:(id)sender {
+    
+
+    NSURL * url = [NSURL URLWithString:@"static/user/static/msg/static"];
+    [JLRoutes.globalRoutes routeURL:url];
+}
+- (IBAction)loadViewControllerFromDynamicLibrary:(id)sender {
+    
+
+    NSURL * url = [NSURL URLWithString:@"dynamic/user/dynamic/msg/dynamic"];
+    
+    [JLRoutes.globalRoutes routeURL:url];
 }
 
 

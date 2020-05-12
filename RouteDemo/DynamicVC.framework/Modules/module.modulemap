@@ -1,0 +1,6 @@
+framework module DynamicVC {
+  umbrella header "DynamicVC.h"
+
+  export *
+  module * { export * }
+}
